@@ -1,0 +1,1153 @@
+@charset "utf-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+} 
+/* header 画像 */
+header {
+  aspect-ratio: 1920 / 768;
+  background: url(../images/pc-hero.jpg) no-repeat center/cover;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* header 画像の上に乗る要素 */
+.header-box {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 75%;
+  position: absolute;
+}
+.logo-oya {
+  display: inline;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+}
+.logo-768 {
+  display: none;
+  padding: 5%;
+}
+.main-rog {
+  width: 25%;
+  max-width: 300px;
+  height: 70%;
+  max-height: 539px;
+  display: block;
+  margin: 0 10% 0 20%;
+}
+.sns-icon {
+  align-self: flex-end;
+  max-width: 38px;
+  max-height: 176px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-left: 10%;
+}
+.title-sentence {
+  align-self: flex-end;
+  width: 40%;
+  max-width: 468px;
+  height: 12%;
+  max-height: 96px;
+  transform: translateX(70%);
+  color: #ffffff;
+  font-size: 20px;
+  position: absolute;
+  top: 80%;
+  right: 30%;
+}
+/* heder下のナビ */
+.pan {
+  width: 100%;
+  height: 60px;
+  margin: 20px 20px 50px 20px;
+}
+/* Attraction 観光名所 文字と画像 親要素*/
+.headline-left {
+  max-width: 40%;
+  aspect-ratio: 530 / 96;
+  position: relative;
+  margin: 20px;
+  bottom: 80px;
+}
+.headline-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  aspect-ratio: 530 / 96;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 80px;
+}
+.headline-info {
+  width: 40%;
+
+}
+.left-img {
+  width: 100%;
+}
+.headline-right img {
+  width: 100%;
+}
+/* Attraction 観光名所 子要素 文字場所指定 */
+.headline-left-text {
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  width: 100%;
+}
+.headline-right-text {
+  position: absolute;
+  top: 37%;
+  right: 7%;
+}
+/* Attraction 観光名所 英語 */
+.en {
+  font-size: 48px;
+}
+/* Attraction 観光名所 日本語 */
+.ja {
+  font-size: 24px;
+}
+/* 九份 */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  padding: 0 0 20px 50px;
+}
+.Attraction-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Attraction-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.Attraction-main,
+.Attraction-row-text,
+.Attraction-sub,
+.recommend {
+    flex: 1;
+}
+.Attraction-img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Attraction-row-text p {
+    flex: 1;
+    margin: 0;
+    padding: 20px 40px;
+    line-height: 1.8;
+    background: rgba(108, 186, 216, 0.2);
+}
+.Attraction-sub {
+    display: flex;
+    gap: 20px;
+}
+
+.Attraction-img2,
+.Attraction-img3 {
+    width: calc(50% - 10px);
+    display: block;
+}
+.img-sub2,
+.img-sub3 {
+  width: 100%;
+  height: 100%;
+}
+.recommend {
+    height: 160px;
+    background: rgba(108, 186, 216, 0.2);
+    display: flex;
+     flex-direction: column;  
+    justify-content: center; 
+    text-align: center;
+}
+.recommend h1 {
+  padding-bottom: 40px;
+}
+.line {
+    width: 30%;
+    height: 1px;
+    background-color: #000;
+    margin: 80px auto;
+}
+.market {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.market-row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.market-text,
+.market-img1,
+.button-grid,
+.market-img2 {
+    flex: 1;
+}
+.market-text {
+  display: flex;
+  flex-direction: column;   /* h1とh2を縦並び */
+  justify-content: center;  /* 上下中央 */
+  align-items: center;      /* 左右中央 */
+  line-height: 2;
+  font-size: 20px;
+  margin-bottom: 120px;
+  height: 264px;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+.market-img1 img,
+.market-img2 img {
+    width: 100%;
+    display: block;
+}
+.button-grid {
+ display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    gap: 20px;
+    width: 460px;
+    margin: 0 auto;
+}
+.button-box {
+   position: relative;
+}
+.button-box > button {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.button-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.button-box span {
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    pointer-events: none;
+    width: 150px;
+    text-align: center;
+}
+.market-img1 {
+  height: 264px;
+  margin-bottom: 120px;
+}
+
+.market-img1 img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.market-img2 img {
+  width: 100%;
+  max-width: 100%;
+}
+.access {
+  font-size: 24px;
+  margin-left: 92px;
+}
+.line-left {
+  width: 33%;
+  height: 1px;
+  background-color: #000;
+  margin: 40px 0 80px 92px;
+}
+.access-text {
+  position: absolute;
+  top: 30%;
+  left: 28%;
+}
+.access-img {
+  width: 95%;
+  height: 336px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.access-img img {
+  width: 100%;
+  max-width: 1160px;
+  max-height: 100%;
+  margin: 0 auto;
+}
+.access-info {
+    width: 100%;
+    max-width: 100%;
+    height: 832px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;      /* 2段に折り返す */
+    justify-content: space-between;
+    gap: 40px 30px;       /* 縦40px・横30px */
+    margin-bottom: 40px;
+}
+
+.access-item {
+    width: 45%;
+    height: 45%;
+}
+.access-item span {
+    font-weight: bold;
+}
+.access-item h1 {
+  font-size: 24px;
+  padding: 5%;
+  line-height: 1.5;
+  text-align: center;
+}
+.access-item h2 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+.card {
+  width: 20%;
+  aspect-ratio: 246/155;
+  margin-left: 65%;
+  margin-bottom: 80px;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+footer{
+    background:#1583bd;
+    background-size: cover;
+    color:#fff;
+    width: 100%;
+}
+
+/* --------------------
+PC（デスクトップ表示）
+-------------------- */
+
+.footerInner{
+    width:1200px;                     /* PC時の最大幅 */
+    max-width:calc(100% - 64px);      /* 画面幅に応じて縮む */
+    margin:0 auto;                    /* 中央寄せ */
+    padding:32px 0 0;                 /* 上に余白 */
+}
+
+.footerFlag{
+    text-align:center;                /* 国旗を中央に配置 */
+    margin-bottom:48px;               /* 下に余白 */
+}
+
+.footerFlag img{
+    width:100px;                      /* 国旗サイズ */
+}
+
+.footerContents{
+    display:grid;                     /* PC時は3カラムレイアウト */
+    grid-template-columns:400px 1fr 400px; /* 左：ナビ / 中央：ロゴ / 右：SNS */
+    align-items:start;                /* 左ナビを上に揃える */
+}
+
+/* 左ナビ（PC時は左カラム） */
+.footerNav{
+    width:400px;
+}
+
+.footerNav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.footerNav li{
+    border-bottom:2px solid rgba(255,255,255,.5); /* 下線 */
+    margin-bottom:16px;
+    padding-bottom:8px;
+}
+
+.footerNav a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:500;
+}
+
+/* ロゴ＋SNS（PC時は中央〜右の下部に配置） */
+.footerBottom{
+    grid-column:2 / 4;                /* 中央〜右カラムをまとめて扱う */
+    display:flex;                     /* ロゴとSNSを横並び */
+    justify-content:space-between;    /* 左：ロゴ / 右：SNS */
+    align-items:center;
+
+    padding:0 40px;                   /* 左右に余白 */
+    margin-top:200px;                 /* ← ロゴ＋SNSを下部に移動（画像と同じ位置） */
+}
+
+/* ロゴ（中央カラム） */
+.footerLogo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footerLogo img{
+    width:100%;                      /* PC版ロゴサイズ */
+    display:block;
+}
+
+/* SNS（右カラム） */
+.sns{
+    display:flex;
+    align-items:center;
+    gap:24px;                         /* アイコン間の余白 */
+}
+
+.sns img{
+    width:40px;                       /* PC版SNSアイコンサイズ */
+    display:block;
+}
+
+/* コピーライト（フッター最下部） */
+.copyright{
+    margin-top:40px;                  /* 上に余白 */
+    padding:18px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.3);
+    font-size:12px;
+}
+
+/* --------------------
+SP（スマホ表示）
+-------------------- */
+/*モーダル制作*/
+/* モーダル全体のコンテナ */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;                     
+  visibility: hidden;             
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+/* 表示時のクラス */
+.modal-container.is-active {
+  opacity: 1;                   
+  visibility: visible;
+}
+
+/* 背景（グレーの半透明） */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ★カンプ通りの青いモーダル枠 */
+.modal-content-blue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 75%;
+  background-color: rgba(13, 130, 186, 0.9); 
+  padding: 35px 40px;
+  box-sizing: border-box;
+  color: #ffffff;             /* 文字はすべて白 */
+  border-radius: 0;           /* カンプ通り角丸なし（必要なら 4px などに） */
+}
+
+/* ×ボタン */
+.btn-close-white {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;                /* 黒いバツマーク */
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* モーダル内タイトル */
+.modal-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 25px 0;
+  color: #fff;
+}
+
+/* 画像2枚並び */
+.modal-img-grid {
+  display: flex;
+  height: 85%;
+  gap: 20px;
+  align-items: stretch;
+}
+.modal-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.modal-img-grid img {
+    width: calc(50% - 10px);
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+/* 営業時間・住所エリア */
+.modal-info {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  align-items: center;
+  flex: 1;
+}
+
+.modal-info p {
+  margin: 0;
+}
+
+.modal-info .info-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+@media screen and (max-width:768px){
+.logo-oya {
+  width: 20%;
+}
+.logo-768 {
+  display: block;
+  width: 100%;
+}
+.footerInner{
+    width:100%;
+    padding:16px;                     /* スマホ時は余白を小さく */
+}
+
+.footerFlag{
+    margin-bottom:20px;
+}
+
+.footerFlag img{
+    width:80px;                       /* SP版国旗サイズ */
+}
+
+.footerContents{
+    display:flex;                     /* SP時は縦並び */
+    flex-direction:column;
+    align-items:center;
+}
+
+/* ナビ（SP時は中央に縦並び） */
+.footerNav{
+    width:100%;
+    max-width:343px;
+}
+
+.footerNav li{
+    margin:0;
+    padding:0;
+    border-bottom:2px solid rgba(255,255,255,.5);
+}
+
+.footerNav li+li{
+    border-top:none;
+}
+
+.footerNav a{
+    padding:8px 0;
+}
+
+/* ロゴ＋SNS（SP時は横並びで中央） */
+.footerBottom{
+    width:100%;
+    display:flex;
+    flex-direction:row;               /* 横並び */
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+
+    margin-top:80px;                  /* 上に余白（SP版の位置調整） */
+    margin-bottom:20px;
+
+    transform:translateX(-80px);      /* ← ロゴ＋SNSを画像のように左寄せ */
+}
+
+/* ロゴ（SP版サイズ） */
+.footerLogo img{
+    width:140px;
+}
+
+/* SNS（SP版サイズ） */
+.sns{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.sns img{
+    width:70px;
+}
+
+.copyright{
+    margin-top:32px;
+    padding:14px 0;
+    font-size:11px;
+}
+
+}
+
+
+@media screen and (max-width :1024px){
+.access-img {
+  width: 100%;
+}
+.line-left {
+  width: 38%;
+}
+footer {
+  width: 100%;
+}
+.Attraction-left-text{
+  top: 15px;
+  left: 73px;
+}
+.Attraction-block2 p {
+  line-height: 1.4;
+  font-size: 18px;
+}
+.recommend h1,.recommend h2{
+  font-size: 18px;
+}
+.modal-content-blue {
+  height: 70%;
+}
+}
+@media screen and (max-width :768px){
+  .header-box {
+    height: 70%;
+    top: 15%;
+  }
+  .title-sentence {
+    top: 75%;
+  }
+  .access-img {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+  .Attraction-left-text{
+    width: 300px;
+    top:22px;
+    left: 80px;
+  }
+  .en {
+    font-size: 24px;
+  }
+  .jp {
+    font-size: 12px;
+  }
+  .headline-right {
+    align-items: flex-start;
+  }
+  .headline-info {
+    width: 40%;
+  }
+  .headline-info img {
+    width: 100%;
+    max-width: 530px;
+    display: block;
+
+  }
+  .headline-right-text{
+    top: 15px;
+    right: 50px;
+  }
+  .Attraction-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Attraction-main,
+    .Attraction-row-text,
+    .Attraction-sub,
+    .recommend {
+        width: 100%;
+    }
+
+    .Attraction-img2,
+    .Attraction-img3 {
+        width: calc(50% - 10px);
+    }
+     .market-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .market-text,
+    .market-img1,
+    .button-grid,
+    .market-img2 {
+        width: 100%;
+    }
+    .market-text {
+      margin-bottom: 0;
+    }
+    .market-img1 {
+      margin-bottom: 0;
+    }
+    .line-left {
+      width: 51%;
+    }
+    .access-img {
+      height: auto;
+      margin-bottom: 40px;
+    }
+    .access-info {
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+    }
+    .access-item {
+      width: 100%;
+      height: auto;
+    }
+    .access-item h1 {
+      padding: 0%;
+    }
+    .modal-content-blue {
+      height: 90%;
+    }
+} 
+@media screen and (max-width :426px) {
+   header {
+    background-image: url(../images/herofull375.jpg);
+  }
+  .header-box {
+    margin-top: 10%;
+  }
+  .sns-icon {
+    margin-left: 0%;
+  }
+  .main-rog {
+    width: 56%;
+    aspect-ratio: 199/372;
+  }
+  .title-sentence {
+    transform: none;
+    font-size: 12px;
+    margin-left: 108px;
+    width: 70%;
+    height: auto;
+    top: 94%;
+    right: 0%;
+  }
+  .line {
+    width: 60%;
+  }
+  .line-left {
+    width: 60%;
+    margin: 12px 20% 40px 20%;
+  }
+  .headline-left {
+    width: 60%;
+    max-width: 100%;
+    margin: 0 auto;
+    bottom: 40px;
+  }
+  .headline-left-text {
+    width: auto;
+    top: 30%;
+    left: 17%;
+  }
+  .title {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  .Attraction-content{
+    gap: 20px;
+  }
+   .Attraction-main,
+    .Attraction-sub {
+        aspect-ratio: 16 / 9;
+    }
+
+    .Attraction-img1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Attraction-sub {
+        display: flex;
+        gap: 10px;
+    }
+
+    .Attraction-img2,
+    .Attraction-img3 {
+        width: calc(50% - 10px);
+        height: 100%;
+        flex: 1;
+        object-fit: cover;
+    }
+  .headline-right {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  .headline-info {
+    width: 60%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .headline-right-text {
+    top: 13%;
+    right: 29%;
+  }
+  .market-row {
+    align-items: center;
+    justify-content: center;
+  }
+  .market-text {
+    width: 60%;
+  }
+  h3 {
+    font-size: 12px
+  }
+  .market-img1,
+  .market-img2{
+    width: 50%;
+  }
+.button-box p{
+font-size: 12px;
+}
+.access-text {
+  top: 30%;
+  left: 24%;
+}
+.access{
+  font-size: 12px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.access-info {
+  width: 80%;
+}
+.access-item h1,
+.access-item h2 {
+  font-size: 12px;
+}
+  .card {
+    width: 30%;
+    margin: 20px 35% 60px 35%;
+  }
+  .footerBottom {
+  transform: translateX(-17%);
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  }
+.footerLogo {
+  width: 26%;
+}
+.footerLogo img {
+  width: 71px;
+}
+.sns {
+  width: 50%;
+  gap: 20px;
+}
+.sns img {
+  width: 33px;
+}
+.modal-title {
+  font-size: 24px;
+}
+  .modal-content-blue {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-img-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .modal-img-grid img {
+    width: 100%;
+  }
+
+  .modal-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .modal-text {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .modal-info {
+    font-size: 12px;
+    text-align: left;
+    text-align: center;
+  }
+
+}
+@media screen and (max-width :376px){
+  header {
+    background-image: url(../images/herofull375.jpg);
+  }
+  .header-box {
+    margin-top: 68px;
+  }
+  .sns-icon {
+    margin-left: 0%;
+  }
+  .main-rog {
+    width: 56%;
+  }
+  .title-sentence {
+    transform: none;
+    font-size: 12px;
+    margin-left: 108px;
+    width: 70%;
+    height: auto;
+    top: 93%;
+  }
+  .line {
+    width: 60%;
+    margin: 60px auto;
+  }
+  .line-left {
+    width: 60%;
+    margin: 12px 20% 40px 20%;
+  }
+  .headline-left {
+    width: 60%;
+    max-width: 100%;
+    margin: 0 auto;
+    bottom: 40px;
+  }
+  .headline-left-text {
+    width: auto;
+    top: 22%;
+    left: 11%;
+  }
+  .headline-right-text {
+    right: 27%;
+  }
+  .title {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    font-size: 24px;
+  }
+  .Attraction-content{
+    gap: 20px;
+  }
+   .Attraction-main,
+    .Attraction-sub {
+        aspect-ratio: 16 / 9;
+    }
+
+    .Attraction-img1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .Attraction-sub {
+        display: flex;
+        gap: 10px;
+    }
+
+    .Attraction-img2,
+    .Attraction-img3 {
+        width: calc(50% - 10px);
+        height: 100%;
+        flex: 1;
+        object-fit: cover;
+    }
+  .Attraction-right {
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+  }
+  .Attraction-info {
+    width: 60%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .Attraction-right-text {
+    top: 13%;
+    right: 29%;
+  }
+  .market-row {
+    align-items: center;
+    justify-content: center;
+  }
+  .market-text {
+    width: 60%;
+  }
+  h3 {
+    font-size: 12px
+  }
+  .market-img1,
+  .market-img2{
+    width: 50%;
+  }
+.button-box p{
+font-size: 12px;
+}
+.access-text {
+  top: 22%;
+  left: 23%;
+}
+.access{
+  font-size: 12px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.access-info {
+  width: 80%;
+}
+.access-item h1,
+.access-item h2 {
+  font-size: 12px;
+}
+  .card {
+    width: 30%;
+    margin: 20px 35% 60px 35%;
+  }
+  .footerBottom {
+  transform: translateX(-17%);
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  }
+.footerLogo {
+  width: 26%;
+}
+.footerLogo img {
+  width: 71px;
+}
+.sns {
+  width: 50%;
+  gap: 20px;
+}
+.sns img {
+  width: 33px;
+}
+
+}
+/* ==========================================
+   ローディング画面（ページ読み込み時の演出）
+   既存CSSの一番下に追記（メディアクエリよりも下）
+========================================== */
+
+#loading {
+  position: fixed;      /* 画面に固定してスクロールしても動かない */
+  top: 0;
+  left: 0;
+  bottom: 0;            /* 画面下端まで広げる */
+  right: 0;             /* 画面右端まで広げる */
+
+  /* width:100% や height:100vh は不要（上記で全画面を覆うため） */
+
+  background-color: #007AB7; /* ローディング画面の青背景 */
+  display: flex;             /* ロゴを中央に配置するためのflex */
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;            /* すべての要素より最前面に表示 */
+  transition: opacity 1s ease-in-out; /* フェードアウトのアニメーション */
+}
+
+/* ローディング時に表示するロゴ */
+.logo3 {
+  max-width: 300px; 
+  height: auto;
+
+  opacity: 0;                 /* 初期状態は透明 */
+  transform: translateY(20px) scale(0.9); /* 少し下＋縮小状態から開始 */
+
+  /* フェードイン＋ズームのアニメーション */
+  animation: fadeInZoomLogo 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ロゴのアニメーション定義 */
+@keyframes fadeInZoomLogo {
+  to {
+    opacity: 1;               /* 完全に表示 */
+    transform: translateY(0) scale(1); /* 元の位置＋等倍に */
+  }
+}
+
+/* ローディング完了時に付与されるクラス */
+.loaded {
+  opacity: 0;                 /* フェードアウト */
+  pointer-events: none;       /* クリック不可（消えた扱い） */
+}

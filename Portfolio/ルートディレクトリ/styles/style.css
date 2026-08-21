@@ -1,0 +1,531 @@
+@charset "utf-8";
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    max-width: 100%;
+}
+.noto_serif {
+    font-size: 32px;
+    font-style: italic;
+    color: #B71B26;
+    -webkit-text-stroke: 1px black;
+    text-shadow :1px 3px 3px black;
+    margin-bottom: 24px;
+}
+section {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.img-box {
+  margin:0 auto;
+}
+.living {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 629px;
+    margin: 0 0 0 auto;
+    padding: 10px 20px;
+    letter-spacing: .05em;
+}
+main h1 {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: .05em;
+    margin-top: 160px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+main h2 {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: .05em;
+    margin-bottom: 48px;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.heading-line {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.heading-line::before,
+.heading-line::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background-color: #333;
+}
+
+.heading-line::before {
+  margin-right: 15px; /* 左の線と文字の隙間 */
+}
+
+.heading-line::after {
+  margin-left: 15px; /* 右の線と文字の隙間 */
+}
+h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+.concept_ {
+    text-align: center;
+    display: block;
+    margin-bottom: 160px;
+}
+.concept_text {
+      font-size: 16px;
+      display: inline-block;
+      text-align: left;
+}
+.s-conts {
+  max-width: 1000px;
+  margin: 4% auto;
+}
+
+.layout-block {
+  display: flex;
+  justify-content: center;
+  gap: 0 2rem;
+  flex-direction:column;
+}
+
+.box-conts {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 3rem;
+}
+.box-title {
+    text-align: center;
+    font-size: 24px;
+}
+.box_textblock {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+.box-text {
+    text-align: justify;
+  padding: 1rem 0;
+  font-size: 16px;
+}
+
+.box-btn {
+  display: block;
+  text-decoration: none;
+  text-align: end;
+  color: #333;
+  padding: 0.5rem;
+  margin-top: auto;
+}
+
+@media screen and (min-width:768px) {
+
+  .layout-block {
+    flex-direction: row;
+  }
+
+  .box-conts {
+    padding: 0;
+  }
+}
+.flow {
+  width: 100%;
+  height: 498px;
+  background-color: #f1f1f1;
+}
+.flow .heading-line {
+    color: #B71B26;
+}
+.flow_line {
+  display:grid;
+  grid-template-columns: repeat(11,60px);
+  gap: 10px;
+  place-items: center; 
+  justify-content: center;
+}
+.flow_word {
+  text-align: center;
+  writing-mode: vertical-rl;
+  line-height: 2;
+  font-size: 28px;
+  color: #fff;
+  background-color: #333;
+  width: 60px;
+  height: 280px;
+   border-radius: 9999px;
+}
+.arrows {
+  height: 60px;
+  width: 30px;
+  background-color: #c10811;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.box-conts p {
+  width: 100%;
+}
+.Qa-Box {
+  width: 80%;
+  margin: 0 auto;
+}
+.Qa-Box .Qa dt,
+.Qa-Box .Qa dd {
+   display: flex;
+   align-items: baseline;
+   margin: 30px 0;
+}
+.Qa-Box .Qa dt p {
+   margin: 0;
+    padding-left: 15px;
+    font-weight: bold;
+    width: 960px;
+    font-size: 20px;
+}
+.Qa-Box .Qa dd p {
+  margin: 0;
+  padding-left: 15px;
+  width: 960px;
+  font-size: 20px;
+}
+.Qa-Box .Qa dt::before {
+ content: "Q.";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D65556;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  aspect-ratio: 1 / 1;
+}
+.Qa-Box .Qa dd::before {
+  content: "A.";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  aspect-ratio: 1 / 1;
+}
+.nav_contact {
+  background-color: rgba(34, 62, 105, 0.15);
+  width: 100%;
+  height: 1218px;
+  padding-bottom: 60px;
+  margin-bottom: 270px;
+}
+form {
+  background-color: rgba(255,255, 255,0.5);
+  z-index: 10;
+  width: 1020px;
+  margin: 0 auto;
+}
+.essential {
+    background: #c10811;
+    color: #fafafa;
+    font-size: 12px;
+    padding: 0 10px;
+    font-weight: normal;
+    margin-left: 10px;
+    border-radius: 50px;
+}
+th,td {
+margin: 12px;
+font-size: 20px;
+}
+th {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 52px;
+}
+.contact-body_1 {
+  background: #fafafa;
+  height: 52px;
+  width: 332px;
+  margin: 12px;
+}
+.post-body_1 {
+  background: #fafafa;
+  height: 52px;
+  width: 222px;
+  margin: 12px;
+}
+.post-body_2,.mail-body {
+  background: #fafafa;
+  height: 52px;
+  width: 664px;
+  margin: 12px;
+}
+.message-area {
+  background: #fafafa;
+  height: 208px;
+  width: 664px;
+  margin: 12px;
+}
+.radio_body {
+  margin: 28px 4px 28px 40px;
+  transform: scale(2.0);
+  z-index: 0;
+}
+.radio_body_1 {
+  vertical-align: middle;
+  z-index: 0;
+}
+.submitBtn {
+  text-align: center;
+}
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 18px 80px;
+  margin: 48px;
+}
+footer {
+  position: relative;
+}
+.triangle {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  color: #fff;
+  border-radius: 3px;
+  position: fixed;
+  right: 24px;
+  bottom: 30px;
+}
+footer {
+  background-color: #333;
+  color: #fafafa;
+  padding: 14px 10px 20px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+.menu-wrapper {
+  position: relative;
+}
+.menu-icon {
+  width: 40px;
+  height: 30px;
+  position: fixed; /* ← fixedにして常に左上固定 */
+  top: 0;
+  right: 2px;
+  cursor: pointer;
+  z-index: 3;
+  display: inline-block;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background: #B71B26;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* ハンバーガーがXに変形 */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+#menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* メニュー本体（左から出す） */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%; /* ← 初期位置を左へ */
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: left 0.4s ease;
+  z-index: 2;
+}
+
+#menu-toggle:checked ~ .menu {
+  left: 0; /* ← 開いたときは左0へ */
+}
+
+.menu ul {
+  width: 100%;
+  height: auto;
+  list-style: none;
+  padding: 24px 20px;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #007bff;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  margin: 0%;
+}
+.menu li {
+  text-align: center;
+  width: 100%;
+}
+.living {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+main h2 {
+margin-bottom: 24px;
+}
+main h1{
+  margin-top: 80px;
+  font-size: 28px;
+}
+main h2 {
+  font-size: 12px;
+}
+main h3 {
+  font-size: 20px;
+}
+main h4 {
+  font-size: 14px;
+}
+.box-title {
+  font-size: 20px;
+}
+.box-text {
+  font-size: 14px;
+}
+main p img {
+  width: 100%;
+  height: auto;
+}
+.box_textblock {
+  text-align: center;
+  width: 351px;
+  margin: 8px 12px;
+}
+.box-text {
+  display: inline-block; 
+  text-align: left;
+}
+.flow {
+  height: 456px;
+}
+.flow_line {
+  grid-template-columns: 1fr;
+  gap: 7px;
+}
+.flow_word {
+width: 300px;
+height: 32px;
+font-size: 16px;
+text-align: center;
+writing-mode: horizontal-tb;
+}
+.arrows {
+  height: 16px;
+  width: 32px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.Qa-Box .Qa dt p {
+  font-size: 16px;
+}
+.Qa-Box .Qa dd p  {
+  font-size: 16px;
+}
+.noto_serif {
+  width: 240px;
+  font-size: 19px;
+  white-space: nowrap;
+  -webkit-text-stroke: #fff;
+   text-shadow:none;
+}
+.nav_contact {
+  margin-bottom: 160px;
+  height: 1070px;
+}
+.contact-table {
+  text-align: center;
+  width: 100%;
+}
+form {
+  background-color: transparent;
+}
+th, td {
+  display: block;
+  text-align: center;
+}
+th {
+  height: 16px;
+}
+td {
+  margin: 0%;
+}
+.contact-body_1,
+.post-body_1,
+.post-body_2,
+.mail-body {
+  height: 30px;
+}
+.message-area {
+  height: 120px;
+}
+.post-body_2,
+.mail-body {
+  width: 80%;
+}
+.message-area {
+  width: 351px;
+}
+.space {
+  width: 0;
+  height: 0;
+}
+input[type="submit"] {
+  width: 200px;
+  height: 48px;
+  padding: 0;
+  margin: 12px 88px 16px;
+}
+.triangle {
+  right: 12px;
+}
+form {
+  width: 100%;
+  overflow: hidden;
+} 
+}

@@ -1,0 +1,183 @@
+footer{
+    background:#1583bd;
+    color:#fff;
+}
+
+/* --------------------
+PC（デスクトップ表示）
+-------------------- */
+
+.footerInner{
+    width:1200px;                     /* PC時の最大幅 */
+    max-width:calc(100% - 64px);      /* 画面幅に応じて縮む */
+    margin:0 auto;                    /* 中央寄せ */
+    padding:32px 0 0;                 /* 上に余白 */
+}
+
+.footerFlag{
+    text-align:center;                /* 国旗を中央に配置 */
+    margin-bottom:48px;               /* 下に余白 */
+}
+
+.footerFlag img{
+    width:100px;                      /* 国旗サイズ */
+}
+
+.footerContents{
+    display:grid;                     /* PC時は3カラムレイアウト */
+    grid-template-columns:400px 1fr 400px; /* 左：ナビ / 中央：ロゴ / 右：SNS */
+    align-items:start;                /* 左ナビを上に揃える */
+}
+
+/* 左ナビ（PC時は左カラム） */
+.footerNav{
+    width:400px;
+}
+
+.footerNav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.footerNav li{
+    border-bottom:2px solid rgba(255,255,255,.5); /* 下線 */
+    margin-bottom:16px;
+    padding-bottom:8px;
+}
+
+.footerNav a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:500;
+}
+
+/* ロゴ＋SNS（PC時は中央〜右の下部に配置） */
+.footerBottom{
+    grid-column:2 / 4;                /* 中央〜右カラムをまとめて扱う */
+    display:flex;                     /* ロゴとSNSを横並び */
+    justify-content:space-between;    /* 左：ロゴ / 右：SNS */
+    align-items:center;
+
+    padding:0 40px;                   /* 左右に余白 */
+    margin-top:200px;                 /* ← ロゴ＋SNSを下部に移動（画像と同じ位置） */
+}
+
+/* ロゴ（中央カラム） */
+.footerLogo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footerLogo img{
+    width:300px;                      /* PC版ロゴサイズ */
+    display:block;
+}
+
+/* SNS（右カラム） */
+.sns{
+    display:flex;
+    align-items:center;
+    gap:24px;                         /* アイコン間の余白 */
+}
+
+.sns img{
+    width:40px;                       /* PC版SNSアイコンサイズ */
+    display:block;
+}
+
+/* コピーライト（フッター最下部） */
+.copyright{
+    margin-top:40px;                  /* 上に余白 */
+    padding:18px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.3);
+    font-size:12px;
+}
+
+/* --------------------
+SP（スマホ表示）
+-------------------- */
+
+@media screen and (max-width:768px){
+
+.footerInner{
+    width:100%;
+    padding:16px;                     /* スマホ時は余白を小さく */
+}
+
+.footerFlag{
+    margin-bottom:20px;
+}
+
+.footerFlag img{
+    width:80px;                       /* SP版国旗サイズ */
+}
+
+.footerContents{
+    display:flex;                     /* SP時は縦並び */
+    flex-direction:column;
+    align-items:center;
+}
+
+/* ナビ（SP時は中央に縦並び） */
+.footerNav{
+    width:100%;
+    max-width:343px;
+}
+
+.footerNav li{
+    margin:0;
+    padding:0;
+    border-bottom:2px solid rgba(255,255,255,.5);
+}
+
+.footerNav li+li{
+    border-top:none;
+}
+
+.footerNav a{
+    padding:8px 0;
+}
+
+/* ロゴ＋SNS（SP時は横並びで中央） */
+.footerBottom{
+    width:100%;
+    display:flex;
+    flex-direction:row;               /* 横並び */
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+
+    margin-top:80px;                  /* 上に余白（SP版の位置調整） */
+    margin-bottom:20px;
+
+    transform:translateX(-80px);      /* ← ロゴ＋SNSを画像のように左寄せ */
+}
+
+/* ロゴ（SP版サイズ） */
+.footerLogo img{
+    width:140px;
+}
+
+/* SNS（SP版サイズ） */
+.sns{
+    display:flex;
+    align-items:center;
+    gap:32px;
+}
+
+.sns img{
+    width:70px;
+}
+
+.copyright{
+    margin-top:32px;
+    padding:14px 0;
+    font-size:11px;
+}
+
+}

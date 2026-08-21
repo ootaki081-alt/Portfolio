@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>ootakiPortfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styles/reset.css">
+<link rel="stylesheet" href="./styles/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="container">
+        <h1>大瀧のポートフォリオ</h1>
+
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul class="navbar" id="navbar">
+                <li>
+                    <a class="navList" href="#PROFILE">PROFILE</a>
+                </li>
+                <li>
+                    <a class="navList" href="#SKILL">SKILL</a>
+                </li>
+                <li>
+                    <a class="navList" href="#WORKS">WORKS</a>
+                </li>
+                <li>
+                    <a class="navList" href="#CONTACT">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+<section class="section1">
+    <h1 id="PROFILE">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+        </svg>
+        PROFILE
+    </h1>
+    <div>
+        <p class="name">Ootaki Kaito</p>
+        <p>
+        <svg xmlns="http://www.w3.org/2000/svg" 
+            width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+        </svg>
+        japan , chiba
+        </p>
+    </div>
+    <div class="pro-text">
+
+        <div class="interest-item">
+            <div class="interest">
+            <p>関心</p>
+            </div>
+            <div class="interest-text">
+            <p>　ゲームが好きだったことをきっかけに、ゲームやデザインに興味を持ち、大学ではデザインを学んでいました。</p>
+            </div>
+        </div>
+
+        <div class="interest-item">
+            <div class="interest">
+                <p>過去</p>
+            </div>
+            <div class="interest-text">
+                <p>　大学ではプログラミングにも触れる機会がありましたが、当時は十分に理解できないまま学習を終えてしまいました。</p>
+            </div>
+        </div>
+
+        <div class="interest-item">
+            <div class="interest">
+                <p>気持ち</p>
+            </div>
+            <div class="interest-text">
+                <p>　自分が本当に興味を持っていることや、これから身につけたいスキルについて改めて考えるようになり、以前は理解できなかったプログラミングをもう一度基礎から学び始めました。</p>
+            </div>
+        </div>
+
+        <div class="interest-item current">
+            <div class="interest">
+                <p>現在</p>
+            </div>
+            <div class="interest-text">
+                <p>　現在はHTML、CSS、JavaScriptなどを中心に、Web制作を通してプログラミングを学んでいます。<br>デザインを学んだ経験も活かしながら、見た目だけでなく、使いやすさやユーザー目線も意識したWebサイトを制作できるようになることを目指しています。<br>
+                一度理解できなかったことでも、改めて挑戦することで少しずつできることが増えていくことに楽しさを感じています。<br>これからも試行錯誤を重ねながら、デザインとプログラミングの両方を活かせる制作者を目指していきたいと考えています。
+            </p>
+            </div>
+        </div>
+
+    </div>
+    
+</section>
+<section class="section2">
+    <h1 id="SKILL" class="title-skill">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" color="white" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+        <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+        </svg>
+        SKILL
+    </h1>
+    <div class="card">
+        <div class="card-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>レベル</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>★★★★★</th>
+                        <td>なんでも来い</td>
+                    </tr>
+                    <tr>
+                        <th>★★★★☆</th>
+                        <td>自信がある</td>
+                    </tr>
+                    <tr>
+                        <th>★★★☆☆</th>
+                        <td>理解している</td>
+                    </tr>
+                    <tr>
+                        <th>★★☆☆☆</th>
+                        <td>少し理解している</td>
+                    </tr>
+                    <tr>
+                        <th>★☆☆☆☆</th>
+                        <td>触れたことがある</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <h2 class="white">Programming</h2>
+            <table class="Programming-table">
+                <thead>
+                    <tr>
+                        <th class="white">type</th>
+                        <th class="white">年数</th>
+                        <th class="white">レベル</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-tr1">
+                        <th class="white">HTML</th>
+                        <td class="white">3ヶ月</td>
+                        <td class="white">★★★★☆</td>
+                    </tr>
+                    <tr>
+                        <th class="white">CSS</th>
+                        <td class="white">3ヶ月</td>
+                        <td class="white">★★★☆☆</td>
+                    </tr>
+                    <tr class="table-tr1">
+                        <th class="white">JavaScript</th>
+                        <td class="white">1ヶ月</td>
+                        <td class="white">★☆☆☆☆</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3 class="white">取得した資格</h3>
+            <ul class="qualification">
+                <li class="white">クレーン</li>
+                <li class="white">玉掛け</li>
+                <li class="white">日商PC検定3級</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="section3">
+    <h1 id="WORKS">
+        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16">
+        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5M12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0m2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0M1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25"/>
+        </svg>
+        WORKS
+    </h1>
+    <div class="works">
+        <div class="work">
+            <a href="./ルートディレクトリ/html.html">
+                <img src="./images/kagu.png" alt="施工会社ホームページ">
+                <span>施工会社ホームページ</span>
+                <h2>製作状況</h2>
+                <h3>60h×1人</h3>
+            </a>
+        </div>
+        <div class="work">
+            <a href="./taipei/index.html">
+                <img src="./images/herofull375.jpg" alt="台北観光ホームページ">
+                <span>台北観光ホームページ</span>
+                <h2>製作状況</h2>
+                <h3>60h×1人</h3>
+            </a>
+        </div>
+    </div>
+</section>
+<footer>
+<!-- contact -->
+    <h1 id="CONTACT">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+        </svg>
+    </h1>
+</footer>
+</body>
+<script>
+
+//ハンバーガーメニュー 
+
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navbar.classList.toggle("active");
+});
+
+
+// ブレイクポイント768px以下の場合開閉式
+
+const interests = document.querySelectorAll('.interest');
+
+interests.forEach(interest => {
+    interest.addEventListener('click', () => {
+        // 768px以下の場合だけ動作
+        if (window.innerWidth <= 768) {
+            const item = interest.parentElement;
+
+            item.classList.toggle('open');
+        }
+    });
+});
+
+</script>
+</html>

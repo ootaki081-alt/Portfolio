@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+/* Google Fonts 読み込み（HTML側で使用） */
+
+/* Google Fonts
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+*/
+
+/* ---------------------
+共通
+--------------------- */
+
+html{
+    font-size:20px; /* 基準フォントサイズ */
+}
+
+body{
+    font-family:"Zen Kaku Gothic New", sans-serif;
+    font-size:clamp(12px, 1.4vw, 20px); /* 画面幅に応じて文字サイズ可変 */
+}
+
+header{
+    width:100%;
+    height:auto;
+    aspect-ratio: 1366/768;
+}
+
+.container{
+    width:80%;
+    max-width:calc(100% - 64px); /* 余白を確保しつつ最大幅調整 */
+    height:80px;
+    margin:0 10%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative; /* ロゴやハンバーガーの絶対配置用 */
+}
+
+.logo{
+    z-index:1001; /* SP時の重なり順調整 */
+}
+
+.logo img{
+    width:120px;
+    display:block;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+}
+
+.menuLogo{
+    display:none; /* SP時のみ表示するロゴ */
+}
+
+.menuTitle{
+    display:none; /* SP時のメニュータイトル */
+}
+
+.navList{
+    display:flex;
+    gap:32px;
+    list-style:none;
+}
+
+.navList a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:clamp(12px,1.3vw,20px);
+}
+
+/* ---------------------
+ハンバーガー
+--------------------- */
+
+.hamburger{
+    display:none; /* PCでは非表示（SPで表示） */
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+
+    position:relative;
+    z-index:1001; /* ロゴより前面に出す */
+}
+
+.hamburger span{
+    position:absolute;
+    left:15px;
+
+    width:26px;     
+    height:2px;     
+
+    background:#fff;
+
+    transition:.3s; /* 開閉アニメーション */
+}
+
+.hamburger span:nth-child(1){
+    top:16px;
+}
+
+.hamburger span:nth-child(2){
+    top:31px;
+    width:36px; /* 真ん中だけ長く */
+}
+
+.hamburger span:nth-child(3){
+    top:46px;
+}
+
+/* × に変形するアニメーション */
+
+.hamburger.active span:nth-child(1){
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) rotate(45deg); /* 斜め線に変形 */
+    width:36px;
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0; /* 真ん中の線を消す */
+}
+
+.hamburger.active span:nth-child(3){
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) rotate(-45deg); /* 斜め線に変形 */
+    width:36px;
+}
+
+/* ---------------------
+SP
+--------------------- */
+
+@media screen and (max-width :1024px){
+header {
+    width: 100%;
+}
+}
+
+@media (max-width:768px){
+
+html{
+    font-size:12px; /* SP時は文字小さめ */
+}
+header {
+    width: 100%;
+    height: 470px;
+}
+.container{
+    width:100%; /* SP時は左右の余白を縮小 */
+    max-width: 100%;
+    margin:auto;
+    display:flex;
+    justify-content:flex-end; /* ロゴ非表示のため右寄せ */
+    align-items:center;
+    position: absolute;
+    z-index: 10;
+}
+/* ロゴ非表示（SPは別ロゴを表示） */
+.logo{
+    display:none;
+}
+
+.menuLogo{
+    display:block; /* SP専用ロゴ表示 */
+
+    position:absolute;
+    top: -10px;  
+    left:16px;
+
+    z-index:1000;
+}
+.logo img {
+    display: block;
+}
+.menuLogo img{
+    width:120px;
+    height: auto;
+    display:block;
+}
+
+.logo,
+.hamburger{
+    z-index:1001; /* ドロワーより前面 */
+}
+
+/* ハンバーガー（SP用デザイン） */
+body.no-scroll {
+    overflow: hidden;
+}
+.hamburger{
+    display:block;
+
+    width:64px;
+    height:64px;
+
+    border-radius:50%; /* 丸ボタン */
+    border:1px solid rgba(255, 255, 255, 0.046);
+
+    background:rgba(37, 37, 37, 0.25); /* 半透明背景 */
+    backdrop-filter:blur(10px); /* ガラス風 */
+    -webkit-backdrop-filter:blur(10px);
+
+    position:fixed;
+    cursor:pointer;
+}
+
+.hamburger span{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%); /* 中央揃え */
+
+    width:26px;
+    height: 1.2px;
+
+    background:#fff;
+
+    border-radius:1px;
+
+    z-index:1;
+
+    transition:.3s;
+}
+
+.hamburger span:nth-child(2){
+    width:36px; /* 真ん中だけ長く */
+}
+
+/* ドロワーメニュー（右からスライド） */
+
+  .nav{
+    position:fixed;
+    top:0;
+    right:-100%;          /* 初期は画面外 */
+    width:60%;           /* 右側だけ表示 */
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0, 0, 0, 0.25); /* 半透明 */
+
+    transition:.4s;
+    z-index:999;
+}
+
+.nav.open{
+    right:0;
+}
+
+/* Menu タイトル（SPのみ） */
+
+.menuTitle{
+    display:block;
+    width:280px;
+
+    color:#fff;
+    font-size:32px;
+    font-weight:bold;
+
+    margin-bottom:72px;
+    text-align:center;
+}
+
+/* メニューリスト（縦並び） */
+
+.navList{
+    display:flex;
+    flex-direction:column;
+
+    width:280px;
+
+    gap:0;
+
+    list-style:none;
+
+    padding:0;
+    margin:0;
+}
+
+.navList li{
+    display:flex;
+    justify-content:center;
+}
+
+.navList li:first-child{
+    margin-bottom:36px; /* 上の項目だけ余白 */
+}
+
+.navList li:nth-child(4){
+    margin-bottom:40px;
+}
+
+.navList li:nth-child(5){
+    margin-bottom:40px;
+}
+
+.navList a{
+    display:inline-block; /* 下線を自然に見せるため */
+
+    padding-bottom:2px; /* 文字と下線の間 */
+    margin-bottom:12px; /* 項目間の余白 */
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:bold;
+
+    border-bottom:1px solid rgba(255,255,255,.4); /* 下線 */
+}
+
+}
+@media screen and (max-width :426px){
+    header {
+        aspect-ratio: 375/667;
+        height: auto;
+    }
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+@media screen and (max-width :376px){
+    header {
+    height: auto;
+    }
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+}

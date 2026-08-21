@@ -1,0 +1,439 @@
+    body {
+        font-family: sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
+    header {
+        padding: 30px;
+        background-color: #222;
+        color: white;
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-right: var(--bs-gutter-x, .75rem);
+        padding-left: var(--bs-gutter-x, .75rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        padding-left: 0;
+        padding-bottom: 0;
+        list-style: none;
+    }
+
+    .navList {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .hamburger {
+    display: none;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background: #fff;
+    border: .5px solid black;
+    mix-blend-mode: difference;
+    transition: 0.3s;
+}
+
+    .section1 h1,
+    .section2 h1,
+    .section3 h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: calc(1.375rem + 1.5vw);
+        gap: 20px;
+        margin: 4.5rem 0;
+    }
+    .section2 {
+        background-color: black;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        padding-top: 10px;
+        font-family: "DotGothic16", sans-serif;
+    }
+
+    .title-skill {
+        color: white;
+    }
+    .name {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    .pro-text {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .section1 p {
+        margin: 1rem;
+    }
+
+   .pro-text {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 15%;
+}
+
+.pro-text {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.interest-item {
+    position: relative;
+}
+
+.interest {
+    cursor: pointer;
+}
+
+/* 共通：最初は非表示 */
+.interest-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    width: 300px;
+    padding: 15px;
+
+    background: white;
+    color: black;
+    border: 3px solid black;
+    border-radius: 15px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transform: translate(-50%, 20px) scale(0.5);
+    transform-origin: top center;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.interest-item:hover .interest-text {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translate(-50%, 0) scale(1);
+}
+
+
+/* =====================
+   現在だけ右側
+   ===================== */
+
+.current .interest-text {
+    top: 50%;
+    left: 100%;
+
+    transform: translate(-10%, -50%);
+}
+
+.current:hover .interest-text {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translate(20px, -50%);
+    transition:
+        opacity 0.2s ease,
+        transform 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+    th,td  {
+        padding: .5rem;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-body {
+        background-color: #f5f5f5;
+        border-radius: 10px;
+    }
+
+    .table {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0;
+        
+    }
+
+    .row {
+    display: flex;
+}
+
+    .row > div {
+        width: 60%;
+        margin: 5%;
+    }
+
+    .Programming-table {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .white {
+        color: #f5f5f5;
+    }
+    .table-tr1 {
+        background-color: #6E6E6E;
+    }
+    .icon {
+        width: 100%;
+    }
+
+    .section2 h2 {
+        margin: 40px 0 20px;
+        font-size: calc(1.375rem + 1.5vw);
+    }
+    .section2 h3 {
+        margin: 40px 0 9%;
+        font-size: calc(1.375rem + 1.5vw);
+    }
+    .qualification {
+        border-top: 1px solid white;
+    }
+    .qualification li {
+        padding: .5rem;
+    }
+    .section2 li:nth-child(odd) {
+        background-color: #6E6E6E;
+    }
+
+    tbody {
+        border-top: 1px solid white;
+    }
+
+    .works {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .work {
+        width: 40%;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .work a {
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+
+    .work img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .work span {
+        display: block;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .work:hover {
+        transform: translateY(-5px);
+    }
+
+    .section3 h3 {
+        margin-bottom: 10%;
+    }
+
+    footer {
+        margin-top: 50px;
+        padding: 30px;
+        background-color: #222;
+        color: white;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .section2 h3 {
+        margin: 40px 0 13%;}
+    }
+
+    @media screen and (max-width: 768px) {
+    
+     .container {
+        position: relative;
+    }
+
+    /* ハンバーガーボタン */
+    .hamburger {
+        display: block;
+        position: fixed;
+        right: 10px;
+    }
+
+    /* メニュー */
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        gap: 3rem;
+
+        width: 50%;
+        height: 100vh;
+
+        margin: 0;
+        padding: 100px 30px 30px;
+
+        background:rgba(110, 110, 110, 0.6);
+
+        list-style: none;
+
+        /* 最初は画面の右側へ隠す */
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+
+        z-index: 1000;
+    }
+
+    /* メニューを開いた状態 */
+    .navbar.active {
+        transform: translateX(0);
+    }
+
+    .navbar li {
+        margin-bottom: 30px;
+    }
+
+    .navList {
+        display: block;
+        text-decoration: none;
+    }
+
+
+    /* ====================
+       ☰ → ×
+       ==================== */
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+
+        .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .pro-text {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .interest-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .interest {
+        cursor: pointer;
+    }
+
+.interest-text {
+        position: static;
+
+        width: 80%;
+        max-width: 500px;
+
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+
+        border: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: scale(0);
+        transform-origin: top center;
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease,
+            padding 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .interest-item.open .interest-text {
+        max-height: 500px;
+        padding: 15px;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: scale(1);
+    }
+
+    /* 現在もスマホでは下に表示 */
+    .current .interest-text {
+        position: static;
+        transform: translateY(-10px);
+    }
+    .interest-item:hover .interest-text {
+        transform: translate(0%, 0) scale(1);
+    }
+}
+@media screen and (max-width: 425px) {
+    th,td {
+        padding: .1rem;
+    }
+}

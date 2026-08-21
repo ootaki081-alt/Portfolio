@@ -1,0 +1,48 @@
+/* ==========================================
+   ローディング画面（ページ読み込み時の演出）
+   既存CSSの一番下に追記（メディアクエリよりも下）
+========================================== */
+
+#loading {
+  position: fixed;      /* 画面に固定してスクロールしても動かない */
+  top: 0;
+  left: 0;
+  bottom: 0;            /* 画面下端まで広げる */
+  right: 0;             /* 画面右端まで広げる */
+
+  /* width:100% や height:100vh は不要（上記で全画面を覆うため） */
+
+  background-color: #007AB7; /* ローディング画面の青背景 */
+  display: flex;             /* ロゴを中央に配置するためのflex */
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;            /* すべての要素より最前面に表示 */
+  transition: opacity 1s ease-in-out; /* フェードアウトのアニメーション */
+}
+
+/* ローディング時に表示するロゴ */
+.logo3 {
+  max-width: 300px; 
+  height: auto;
+
+  opacity: 0;                 /* 初期状態は透明 */
+  transform: translateY(20px) scale(0.9); /* 少し下＋縮小状態から開始 */
+
+  /* フェードイン＋ズームのアニメーション */
+  animation: fadeInZoomLogo 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ロゴのアニメーション定義 */
+@keyframes fadeInZoomLogo {
+  to {
+    opacity: 1;               /* 完全に表示 */
+    transform: translateY(0) scale(1); /* 元の位置＋等倍に */
+  }
+}
+
+/* ローディング完了時に付与されるクラス */
+.loaded {
+  opacity: 0;                 /* フェードアウト */
+  pointer-events: none;       /* クリック不可（消えた扱い） */
+}
