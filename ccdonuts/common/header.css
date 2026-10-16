@@ -1,0 +1,321 @@
+header {
+    width: 100%;
+    height: auto;
+    background-color: #EDE0D4;
+}
+
+
+/* ====================
+   ヘッダー
+==================== */
+
+.header-inner {
+    position: relative;
+
+    width: 100%;
+    height: 118px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ====================
+   ハンバーガー
+==================== */
+
+.hamburger {
+    width: 50px;
+    height: 50px;
+
+    margin-left: 95px;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+
+    width: 80%;
+    height: 2px;
+
+    margin: 0 auto 16px auto;
+
+    background-color: #7F5539;
+
+    transition: 0.3s;
+}
+
+
+/* ====================
+   ロゴ
+==================== */
+
+.header-inner h1 {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+}
+
+.header-inner h1 img {
+    width: 100%;
+    display: block;
+}
+
+/* ログイン・カート文字 */
+.header-inner h2 span,
+.header-inner h3 span {
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    color: #7F5539;
+}
+
+/* ログイン・カート画像 */
+.header-inner h2 img,
+.header-inner h3 img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    display: block;
+    margin: 6px auto;
+}
+
+/* ====================
+   ログイン
+==================== */
+
+.header-inner h2 {
+    position: absolute;
+
+    right: 80px;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+/* ====================
+   カート
+==================== */
+
+.header-inner h3 {
+    position: absolute;
+
+    right: 20px;
+
+    margin: 0;
+}
+
+/* ====================
+   検索
+==================== */
+
+.search {
+    width: 100%;
+    height: 64px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 12px;
+
+    background-color: #B392AC;
+
+    box-sizing: border-box;
+}
+
+.search img {
+    display: block;
+    margin: 0 auto;
+}
+
+.search button {
+    width: 40px;
+    height: 40px;
+    background-color: #d9d9d9;
+}
+
+.search input {
+    width: 320px;
+    height: 40px;
+    margin-right: 8%;
+    background-color: white;
+}
+
+/* ====================
+   ドロワー
+==================== */
+
+.drawer {
+    position: fixed;
+
+    top: -100%;
+    left: 0;
+
+    width: 100%;
+    height: 500px;
+
+    background-color: rgba(127, 85, 57, 0.75);
+
+    z-index: 1000;
+
+    transition: top 0.4s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* ドロワーが開いた状態 */
+
+.drawer.is-open {
+    top: 0;
+}
+
+
+/* ====================
+   ドロワー上部
+==================== */
+
+.drawer-header {
+    position: relative;
+
+    width: 100%;
+    height: 80px;
+}
+
+
+/* ドロワーのロゴ */
+.drawer-header a {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.drawer-header img {
+    width: auto;
+    display: block;
+}
+
+/* ====================
+   ×ボタン
+==================== */
+
+.drawer-close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 40px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* ====================
+   メニュー
+==================== */
+
+.drawer ul {
+    margin: 0;
+
+    padding: 0 30px 30px;
+
+    list-style: none;
+}
+
+.drawer li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.drawer a {
+    display: block;
+
+    padding: 20px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+.drawer a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ====================
+   背景
+==================== */
+
+
+.drawer-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width :768px){
+
+header {
+    height: 130px;
+}
+
+.hamburger {
+    width: 25px;
+    height: 25px;
+
+    margin-left: 12px;
+}
+
+.hamburger span {
+    width: 100%;
+    margin: 8px auto;
+}
+
+.header-inner {
+    height: 80px;
+}
+
+.header-inner h2 img,
+.header-inner h3 img {
+    width: 24px;
+    height: 24px;
+
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDE0D4;
+    height: 45px;
+    margin: 0 auto;
+}
+.search button {
+    height: 37px;
+}
+.search input {
+    width: 80%;
+    height: 37px;
+}
+}
